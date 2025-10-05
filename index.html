@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/419d3bda65.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init( {
+                publicKey: "LIysW5zslLS32HR-E",
+            });
+        })();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img class="personal-logo" src="./assets/logo_zoomed.PNG" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a class="  nav__link--anchor 
+                                link__hover-effect 
+                                link__hover-effect--black" href="#">About
+                    </a>
+                </li>
+
+                <li class="nav__link">
+                    <a class="  nav__link--anchor 
+                                link__hover-effect 
+                                link__hover-effect--black" href="#projects">Projects
+                    </a>
+                </li>
+
+                <li class="nav__link" onclick="toggleModal()">
+                    <a class="  nav__link--anchor 
+                                link__hover-effect 
+                                link__hover-effect--black" href="#">Contact
+                    </a>
+                </li>
+
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a class="  nav__link--anchor 
+                                link__hover-effect 
+                                link__hover-effect--black" href="#">
+                                <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hello,</h1>
+                <h1 class="title color--teal">I'm Sam</h1>
+                <p class="header__paragraph">I’m a <b class="color--darker-teal">Frontend Software Engineer.</b> My passion for technology and problem-solving drives me to build powerful, yet engaging web experiences.
+                    <br>
+                Here's a bit more <a href="#"><b onclick="toggleModal()" class="color--darker-teal click">about me.</b></a></p>
+
+                <div class="socials__list">
+                    <a href="" class="social-media__link click" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/samtimeinc" class="social-media__link click" target="_blank">
+                        <i class="fa-brands fa-square-github"></i></i></a>
+                    <a href="" class="social-media__link click" target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i></a>
+                </div>
+            </div>
+
+        </header>
+        <a href="#">
+            <button class="mail__btn click onclick" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
+
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+
+        <div class="modal">
+            <div class="modal__half modal__about-me">
+                <h3 class="modal__title modal__about-me--title">
+                    Here's a bit more about me.
+                </h3>
+
+                <h4 class="modal__subtitle modal__about-me--subtitle">
+                    Frontend Software Engineer
+                </h4>
+
+                <p class="modal__paragraph modal__about-me__paragraph">
+                    I came to <b class="color--darker-teal">software engineering</b> because I have much to offer to tech: <b class="color--darker-teal">leadership, curiosity, creativity,</b> and <b class="color--darker-teal">effective problem-solving.</b> I believe that when a team of <b class="color--darker-teal">bright, inspired minds</b> come together for a common <b class="color--darker-teal">goal</b>, there's not a problem in the world we can't <b class="color--darker-teal">solve.</b>
+                    <br>
+                    <br>
+                    Software engineering allows me to harness my <b class="color--darker-teal">passion</b> for technology in order to <b class="color--darker-teal">draw people together,</b> connecting us to the resources we need. I take on tough challenges in order to find the <b class="color--darker-teal">smart, intuitive solutions</b> to the problems we encounter. When we <b class="color--darker-teal">work together,</b> there is no limit to our <b class="color--darker-teal">success!</b>
+                </p>
+
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#E44D26" d="M14.021 90.034 6 0h88.187l-8.022 89.985L50.02 100"/><path fill="#F16529" d="M50.093 92.344V7.39h36.048l-6.88 76.811"/><path fill="#EBEBEB" d="M22.383 18.4h27.71v11.036H34.488L35.51 40.74h14.584v11.01H25.397zm3.5 38.893h11.084l.778 8.823 12.348 3.306v11.521l-22.654-6.32"/><path fill="#fff" d="M77.706 18.4H50.044v11.036h26.64zm-2.018 22.34H50.044v11.035h13.612l-1.288 14.341-12.324 3.306v11.473l22.606-6.271"/></svg>
+                        <span class="language__name">HTML</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#264DE4" d="m94.175 0-8.033 89.99L50.034 100l-36.01-9.996L6 0z"/><path fill="#2965F1" d="m79.265 84.26 6.864-76.9H50.087v84.988z"/><path fill="#EBEBEB" d="m24.396 40.74.99 11.039h24.702V40.74zm25.692-22.342h-27.68l1.003 11.038h26.676zm-.001 62.495V69.408l-.048.013-12.294-3.32-.786-8.803H25.878l1.547 17.332 22.612 6.277z"/><path fill="#fff" d="m63.642 51.779-1.281 14.316-12.312 3.323v11.484l22.63-6.272.166-1.865 2.594-29.06.27-2.965L77.7 18.398H50.05v11.038h15.555L64.599 40.74H50.05v11.04z"/></svg>
+                        <span class="language__name">CSS</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#F7DF1E" d="M100 0H0v100h100z"/><path fill="#000" d="M67.175 78.125c2.014 3.29 4.634 5.707 9.27 5.707 3.893 0 6.38-1.946 6.38-4.635 0-3.222-2.555-4.364-6.84-6.238l-2.35-1.008c-6.781-2.89-11.286-6.508-11.286-14.159 0-7.047 5.37-12.413 13.762-12.413 5.975 0 10.27 2.08 13.365 7.524l-7.317 4.699c-1.612-2.89-3.35-4.027-6.048-4.027-2.752 0-4.497 1.746-4.497 4.027 0 2.819 1.746 3.96 5.778 5.706l2.35 1.006c7.983 3.424 12.491 6.915 12.491 14.762 0 8.46-6.646 13.096-15.571 13.096-8.727 0-14.365-4.16-17.124-9.61zm-33.196.815c1.477 2.619 2.82 4.833 6.048 4.833 3.087 0 5.035-1.208 5.035-5.905V45.916h9.397v32.08c0 9.73-5.705 14.158-14.032 14.158-7.524 0-11.881-3.894-14.097-8.583z"/></svg>
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100"><path fill="#61DAFB" d="M50.307 58.816a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632"/><path stroke="#61DAFB" stroke-width="5" d="M50.307 68.063c26.126 0 47.306-8.087 47.306-18.063s-21.18-18.062-47.306-18.062C24.18 31.938 3 40.024 3 50s21.18 18.063 47.307 18.063Z"/><path stroke="#61DAFB" stroke-width="5" d="M34.664 59.031C47.727 81.658 65.321 95.957 73.96 90.97c8.64-4.988 5.053-27.374-8.01-50C52.885 18.342 35.291 4.043 26.652 9.03s-5.052 27.374 8.011 50Z"/><path stroke="#61DAFB" stroke-width="5" d="M34.664 40.969c-13.063 22.626-16.65 45.012-8.01 50 8.638 4.988 26.232-9.311 39.295-31.938s16.65-45.012 8.01-50c-8.638-4.988-26.232 9.311-39.295 31.938Z"/></svg>
+                        <span class="language__name">React</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#A179DC" d="M94.74 29.324c-.001-1.677-.36-3.16-1.085-4.431-.713-1.25-1.78-2.3-3.211-3.128-11.815-6.812-23.64-13.603-35.45-20.423-3.185-1.838-6.272-1.77-9.432.094C40.859 4.209 17.316 17.698 10.3 21.76c-2.889 1.673-4.295 4.233-4.295 7.56-.005 13.7 0 27.4-.005 41.1 0 1.64.344 3.093 1.037 4.346.713 1.288 1.795 2.365 3.26 3.213 7.015 4.064 30.562 17.551 35.263 20.325 3.162 1.866 6.25 1.932 9.434.093 11.811-6.82 23.638-13.61 35.454-20.422 1.464-.847 2.546-1.925 3.259-3.213.692-1.252 1.037-2.706 1.037-4.346 0 0 0-27.392-.005-41.092"/><path fill="#280068" d="M50.508 49.737 7.038 74.766c.712 1.288 1.794 2.365 3.258 3.213C17.314 82.043 40.86 95.53 45.56 98.304c3.162 1.866 6.25 1.932 9.434.093 11.811-6.82 23.638-13.61 35.454-20.422 1.464-.847 2.546-1.925 3.259-3.213z"/><path fill="#390091" d="M94.74 29.324c-.001-1.677-.36-3.16-1.085-4.431L50.508 49.737l43.199 25.025c.692-1.252 1.036-2.706 1.037-4.346 0 0 0-27.392-.005-41.092"/><path fill="#fff" d="M76.102 40.38v4.678h4.678V40.38h2.34v4.678h4.677v2.34H83.12v4.678h4.678v2.339H83.12v4.678h-2.34v-4.678h-4.677v4.678h-2.34v-4.678h-4.678v-2.34h4.678v-4.678h-4.678v-2.339h4.678V40.38zm4.678 7.017h-4.678v4.679h4.678z"/><path fill="#fff" d="M50.603 16.884c12.203 0 22.857 6.627 28.563 16.478l-.055-.095-14.358 8.267c-2.828-4.79-8.014-8.022-13.963-8.088l-.187-.001c-9.071 0-16.426 7.353-16.426 16.425 0 2.966.791 5.747 2.167 8.149 2.83 4.943 8.153 8.277 14.26 8.277 6.142 0 11.495-3.377 14.312-8.372l-.068.12 14.335 8.305C73.54 76.116 63.031 82.722 50.97 82.854l-.367.002c-12.241 0-22.925-6.668-28.618-16.57a32.84 32.84 0 0 1-4.368-16.416c0-18.217 14.768-32.986 32.986-32.986"/></g><defs><clipPath id="a"><path fill="#fff" d="M6 0h88.889v100H6z"/></clipPath></defs></svg>
+                        <span class="language__name">Csharp</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#512BD4" d="M100 0H0v100h100z"/><path fill="#fff" d="M17.823 63.889q-1.06 0-1.803-.707-.742-.725-.742-1.722 0-1.015.742-1.74a2.48 2.48 0 0 1 1.803-.725q1.08 0 1.821.725.76.725.76 1.74 0 .998-.76 1.722-.743.707-1.82.707m28.266-.399h-4.597L29.385 44.387a8.6 8.6 0 0 1-.76-1.504h-.107q.142.834.142 3.57V63.49h-4.066V37.5h4.897l11.702 18.65q.742 1.16.954 1.595h.07q-.176-1.033-.176-3.498V37.5h4.048zm19.798 0h-14.23V37.5h13.665v3.661h-9.458v7.358h8.715v3.644h-8.715v7.684h10.023zm20.223-22.329h-7.283v22.33h-4.207V41.16h-7.265V37.5h18.755z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg>
+                        <span class="language__name">.NET</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#F25022" d="M47.5-.001H0v47.5h47.5z"/><path fill="#7FBA00" d="M100-.001H52.5v47.5H100z"/><path fill="#00A4EF" d="M47.5 52.499H0v47.5h47.5z"/><path fill="#FFB900" d="M100 52.499H52.5v47.5H100z"/></svg>
+                        <span class="language__name">MS SQL</span>
+                    </figure>
+
+                    <figure class="modal__language">
+                        <svg class="modal__language--img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#1266A9" d="M5.857 68.026c.096.217.205.417.321.617.054.116.13.237.196.345.108.217.225.425.338.634l.654 1.1c.12.204.237.404.375.604.229.392.5.775.737 1.167.109.162.209.325.33.487a26 26 0 0 0 1.32 1.88c.317.428.634.85.975 1.27.113.159.238.317.354.475l.921 1.117c.113.129.225.279.346.412.409.492.842.967 1.275 1.45 0 .009.013.017.021.03a12.7 12.7 0 0 0 1.75 1.808l.017.017c.333.341.666.679 1.02 1.012l.421.404c.463.434.925.863 1.413 1.28.008 0 .012.008.02.012l.238.208c.425.371.854.738 1.292 1.08l.52.437c.355.283.722.55 1.084.83l.567.432c.387.292.8.575 1.196.859q.217.158.441.304l.121.096 1.171.766.5.334c.613.391 1.22.758 1.83 1.125.174.087.35.183.512.283.45.258.916.521 1.37.758.25.142.509.263.767.392q.47.26.971.521c.092.03.167.058.242.1l.016-.017c.138.063.267.13.4.196q.75.373 1.563.721c.1.042.208.083.317.142.6.262 1.2.512 1.82.754.142.041.292.112.438.166.562.213 1.142.43 1.717.634l.208.075c.637.216 1.267.425 1.917.62.15.042.304.097.462.138.663.2 1.304.438 1.975.563 42.805 7.762 55.242-25.609 55.242-25.609C87.108 84.597 68.562 88.168 51 84.193c-.65-.15-1.3-.359-1.959-.55q-1.394-.395-2.762-.871l.395.12-.258-.1c-.566-.191-1.112-.404-1.666-.616a6 6 0 0 0-.413-.158l-.046-.013a54 54 0 0 1-1.8-.758c-.129-.042-.237-.1-.367-.15q-1.05-.458-2.083-.959l.575.255a6 6 0 0 1-.441-.217c-.392-.183-.784-.392-1.167-.588a16 16 0 0 1-.863-.441l.084.041c-.471-.25-.942-.52-1.417-.775-.142-.1-.304-.183-.467-.275a59 59 0 0 1-2.091-1.275l.262.159a9 9 0 0 1-.517-.346l.025.017a25 25 0 0 1-1.316-.867c-.142-.092-.271-.192-.417-.292q-.673-.46-1.325-.95l.1.071c-.175-.142-.363-.275-.55-.412-.367-.288-.737-.563-1.104-.863l-.492-.391a42 42 0 0 1-1.542-1.288l-.004-.004-1.445-1.313-.417-.391c-.342-.346-.692-.675-1.042-1.017l-.404-.417a38 38 0 0 1-1.263-1.312l-.025-.03-.07-.058a75 75 0 0 1-1.305-1.47c-.112-.13-.216-.267-.333-.405l-.946-1.146a58 58 0 0 1-1.25-1.629l-.166-.233C8.966 49.042 5.44 30.78 13.237 15.796l-6.884 8.705C-2.5 37.163-1.405 53.63 5.366 67.076c.154.33.325.637.491.95"/><path fill="#000" d="m35.679 49.784-.046-.067-.038-.05z"/><path fill="#1266A9" d="m40.337 55.25.375.376c.475.458.962.904 1.458 1.35l.063.054c.5.441 1.062.904 1.642 1.354l.087.067c.142.096.262.208.4.304.583.45 1.17.879 1.783 1.308l.063.038c.258.187.533.358.825.541.117.075.25.175.375.25.441.284.875.546 1.32.817.072.03.134.067.2.096.376.229.784.45 1.176.65.137.083.27.146.412.225.28.137.554.283.821.425l.133.058c.563.275 1.138.534 1.7.788.142.054.263.1.384.158.462.2.933.392 1.396.567.208.07.404.154.6.216.425.159.87.305 1.291.45l.584.188c.608.187 1.225.433 1.87.533C92.35 71.505 100 46.183 100 46.183c-6.888 9.863-20.217 14.563-34.421 10.893a34 34 0 0 1-2.108-.605l.237.067c-.2-.054-.375-.117-.567-.175-.433-.15-.879-.296-1.3-.45l-.6-.225c-.466-.187-.941-.362-1.395-.562-.142-.063-.271-.105-.38-.167-.583-.263-1.17-.52-1.741-.796l-.859-.446-.495-.25c-.384-.2-.738-.408-1.105-.62a2 2 0 0 1-.27-.15l.012.004c-.442-.275-.9-.542-1.325-.821-.142-.08-.27-.175-.404-.259l-.867-.562c-.6-.417-1.187-.863-1.783-1.296-.134-.12-.263-.22-.392-.33-6.246-4.887-11.17-11.566-13.508-19.128-2.463-7.863-1.921-16.68 2.333-23.834l-5.23 7.367c-6.42 9.17-6.058 21.43-1.058 31.13a37.4 37.4 0 0 0 2.859 4.745c.95 1.358 2 2.95 3.266 4.042.45.512.934 1 1.438 1.496"/><path fill="#1266A9" d="M56.941 5.863c-3.787 5.529-4.15 12.396-1.541 18.491 2.77 6.475 8.433 11.559 15.033 13.967.27.104.533.192.813.292l.366.112c.384.121.771.263 1.167.35 18.254 3.505 23.196-9.325 24.525-11.212-4.346 6.208-11.633 7.7-20.575 5.537a20 20 0 0 1-2.292-.708l.138.046a26 26 0 0 1-2.734-1.125l.159.07a27 27 0 0 1-4.538-2.766C59.47 22.875 54.53 11.37 59.745 2z"/></svg>
+                        <span class="language__name">jQuery</span>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="modal__half modal__contact">
+                <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+
+                <h3 class="modal__title modal__contact--title">
+                    Let's connect!
+                </h3>
+
+                <h4 class="modal__subtitle modal__contact--subtitle">
+                    I'm currently open to new opportunities. 
+                </h4>
+
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label"><span class="color--red">* </span>Name</label>
+                        <input type="text" class="input" name="user_name" placeholder="Name" required></input>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="form__item--label"><span class="color--red">* </span>Email</label>
+                        <input type="email" class="input" name="user_email" placeholder="example@email.com" required></input>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="form__item--label"><span class="color--red">* </span>Message</label>
+                        <textarea type="text" class="input" name="message" placeholder="What's on your mind?" required></textarea>
+                    </div>
+
+                    <button id="contact__submit" class="form__submit">
+                        Send
+                    </button>
+                </form>
+
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+
+                <div class="modal__overlay modal__overlay--success">
+                    <h3 class="modal__overlay--title">
+                        Message Sent!
+                    </h3>
+                    <p class="modal__overlay--paragraph">
+                        Thank you for reaching out. Looking forward to speaking with you soon!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <img class="shape shape--0" src="./assets/semi circle.svg">
+        <img class="shape shape--1" src="./assets/circle.svg">
+        <img class="shape shape--2" src="./assets/squiggly.svg">
+        <img class="shape shape--3" src="./assets/circle.svg">
+        <img class="shape shape--4" src="./assets/triangle.svg">
+        <img class="shape shape--5" src="./assets/circle.svg">
+        <img class="shape shape--6" src="./assets/squiggly.svg">
+        <img class="shape shape--7" src="./assets/circle.svg">
+        <img class="shape shape--8" src="./assets/semi circle.svg">
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">Here are some of my <span class="color--darker-teal">projects</span></h1>
+
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img class="project__img" src="./assets/blinker mockup.png" alt="">
+
+                            <div class="project__wrapper--background"></div>
+
+                            <div class="project__description">
+                                <h3 class="project__description--title">Car Sales Projects</h3>
+
+                                <h4 class="project__description--subtitle">HTML, CSS Javascript, Vue, Vuex</h4>
+
+                                <p class="project__description--paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam neque asperiores fuga minus. Quas minus eos quo necessitatibus, magni accusamus aliquam a inventore laborum praesentium aut perspiciatis cupiditate nesciunt rem!</p>
+
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img class="project__img" src="./assets/blinker mockup.png" alt="">
+
+                            <div class="project__wrapper--background"></div>
+
+                            <div class="project__description">
+                                <h3 class="project__description--title">Car Sales Projects</h3>
+
+                                <h4 class="project__description--subtitle">HTML, CSS Javascript, Vue, Vuex</h4>
+
+                                <p class="project__description--paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt voluptates omnis ex architecto inventore dolore, amet corporis. Magni debitis voluptatum illo adipisci aspernatur vel.
+
+                                </p>
+
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img class="project__img" src="./assets/blinker mockup.png" alt="">
+
+                            <div class="project__wrapper--background"></div>
+
+                            <div class="project__description">
+                                <h3 class="project__description--title">Car Sales Projects</h3>
+
+                                <h4 class="project__description--subtitle">HTML, CSS Javascript, Vue, Vuex</h4>
+
+                                <p class="project__description--paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius inventore ducimus necessitatibus laboriosam dicta, maxime repellat commodi tempora doloremque nobis?</p>
+
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <a class="click" href="#">
+                        <img src="./assets/logo_zoomed.PNG" alt="" class="footer__personal-logo">
+                    </a>
+                </figure>
+    
+                <div class="footer__socials--list">
+                    <a class="  footer__social--link 
+                                link__hover-effect 
+                                link__hover-effect--white 
+                                click" href="https://github.com/samtimeinc" target="_blank">
+                                Github
+                    </a>
+    
+                    <a class="  footer__social--link 
+                                link__hover-effect 
+                                link__hover-effect--white 
+                                click" href="" target="_blank">
+                                LinkedIn
+                    </a>
+    
+                    <a class="  footer__social--link 
+                                link__hover-effect 
+                                link__hover-effect--white 
+                                click" href="#" onclick="toggleModal()"> 
+                                Contact
+                    </a>
+    
+                    <a class="  footer__social--link 
+                                link__hover-effect 
+                                link__hover-effect--white 
+                                click" target="_blank" href=""> 
+                                Resume
+                    </a>
+                </div>
+    
+                <div class="footer__copyright">
+                    Copyright &copy 2025 Sam Phin
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
